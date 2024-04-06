@@ -8,12 +8,10 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
-import { updateUser } from "@/lib/actions/user.actions";
 import { CommentValidation } from "@/lib/validations/thread";
 import { addCommentThread } from "@/lib/actions/thread.action";
 import { Input } from "../ui/input";
@@ -27,7 +25,6 @@ interface Props {
 }
 
 const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const form = useForm({
@@ -68,7 +65,7 @@ const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
               <FormControl className="border-none bg-transparent">
                 <Input
                   type="text"
-                  placeholder="Write a comment"
+                  placeholder="Comment..."
                   className="no -focus text-light-1 outline-none"
                   {...field}
                 />

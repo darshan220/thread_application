@@ -141,7 +141,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                 <Input
                   type="file"
                   accept="image/*"
-                  placeholder="Upload a photo"
+                  placeholder="Add profile photo"
                   className="account-form_image-input"
                   onChange={(e) => handleImage(e, field.onChange)}
                 />
@@ -179,7 +179,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
               <FormLabel className="text-base-semibold text-light-2">
                 Username
               </FormLabel>
-              <FormControl className="flex-1 text-base-semibold text-gray-200">
+              <FormControl>
                 <Input
                   type="text"
                   className="account-form_input no-focus"
@@ -198,7 +198,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
               <FormLabel className="text-base-semibold text-light-2">
                 Bio
               </FormLabel>
-              <FormControl className="flex-1 text-base-semibold text-gray-200">
+              <FormControl>
                 <Textarea
                   rows={10}
                   className="account-form_input no-focus"
